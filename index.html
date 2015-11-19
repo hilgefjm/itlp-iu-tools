@@ -1,3 +1,109 @@
-<body>
-	<p> fun! </p>
-</body>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Field Service Tools</title>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<link rel="stylesheet" type="text/css" href="css/tools.css"/>
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"/>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+		
+		<script src="js/tools.js"></script>
+		<script src="js/jobScreen.js"></script>
+		<script src="js/toolListScreen.js"></script>
+		<script src="js/toolScreen.js"></script>
+
+		<meta charset="utf-8">
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="Viewport" content="initial-scale=1.0"/>
+		<meta name="Viewport" content="width=device-width"/>
+		<meta name="Viewport" content="height=device-height"/>
+		<meta name="Viewport" content="user-scalable=no" />
+	</head>
+	<body>
+		<section data-role="page" id="job-page">
+			<div data-role="header" data-position="fixed">
+				<h1 class="title">Jobs</h1>
+			</div>
+
+			<div role="main" class="ui-content" data-role="content">
+				<ul id="jobList" data-role="listview" data-filter="true" data-filter-placeholder="Search jobs..." data-inset="true">
+<!-- Comment out when we use JQuery to populate -->
+					<li>
+						<a href="#tools-page" onclick="setJob(this);">
+							<h2>Cincinnati</h2>
+							<p class="ui-li-aside"><strong>11/1/2015</strong></p>
+						</a>
+					</li>
+					<li>
+						<a href="#tools-page" onclick="setJob(this);">
+							<h2>New York</h2>
+							<p class="ui-li-aside"><strong>11/15/2015</strong></p>
+						</a>
+					</li>
+<!-- End of placeholder data -->
+				</ul>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<p>&copy; Group 4 </p>
+			</div>
+		</section>
+		
+		<section data-role="page" id="tools-page">
+			<div data-role="header" data-position="fixed">
+				<a href="#job-page" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left"></a>
+				<h1 class="title">Tools</h1>
+				<a href="#tool-page" data-icon="plus" data-iconpos="notext" class="ui-btn-right"></a>
+			</div>
+
+			<div role="main" class="ui-content" data-role="content">
+				<ul id="toolsList" data-role="listview" data-filter="true" data-filter-placeholder="Search tools..." data-inset="true">
+<!-- Comment out when we use JQuery to populate -->
+					<li>
+						<a href="#tool-page" onclick="setTool(this);">
+							<h2>Bolts</h2>
+							<p>Received</p>
+							<p class="ui-li-aside"><strong>32</strong></p>
+						</a>
+					</li>
+					<li>
+						<a href="#tool-page" onclick="setTool(this);">
+							<h2>Philips 5.0 x 75mm Screwdriver</h2>
+							<p>Shipped</p>
+							<p class="ui-li-aside"><strong>1</strong></p>
+						</a>
+					</li>
+<!-- End of placeholder data -->
+				</ul>
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<p>&copy; Group 4 </p>
+			</div>
+		</section>
+		
+		<section data-role="page" id="tool-page">
+			<div data-role="header" data-position="fixed">
+				<a href="#tools-page" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left"></a>
+				<h1 class="title">Tool</h1>
+			</div>
+
+			<div role="main" class="ui-content" data-role="content">
+				
+			</div>
+
+			<div data-role="footer" data-position="fixed">
+				<p>&copy; Group 4 </p>
+			</div>
+		</section>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBK-3_lZcAKAvjROl493ju0KxUAHpSU0iQ&libraries=places&callback=initMapPage" async defer></script>
+	</body>
+</html>

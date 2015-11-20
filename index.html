@@ -6,9 +6,8 @@
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 
-		<link rel="stylesheet" type="text/css" href="css/tools.css"/>
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css"/>
-
+		<link rel="stylesheet" type="text/css" href="css/tools.css"/>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
@@ -21,10 +20,7 @@
 		<meta charset="utf-8">
 		<meta name="HandheldFriendly" content="true"/>
 		<meta name="MobileOptimized" content="320"/>
-		<meta name="Viewport" content="initial-scale=1.0"/>
 		<meta name="Viewport" content="width=device-width"/>
-		<meta name="Viewport" content="height=device-height"/>
-		<meta name="Viewport" content="user-scalable=no" />
 	</head>
 	<body>
 		<section data-role="page" id="job-page">
@@ -38,40 +34,24 @@
 			</div>
 
 			<div data-role="footer" data-position="fixed">
-				<p>&copy; Group 4 </p>
+				<h1>&copy; Group 4 </h1>
 			</div>
 		</section>
 
 		<section data-role="page" id="tools-page">
 			<div data-role="header" data-position="fixed">
 				<a href="#job-page" data-icon="carat-l" data-iconpos="notext" class="ui-btn-left"></a>
-				<h1 class="title">Tools</h1>
-				<a href="#tool-page" data-icon="plus" data-iconpos="notext" class="ui-btn-right" onclick="newTool();"></a>
+				<h1 class="title" id="tools-title">Tools</h1>
+				<a href="#tool-page" data-icon="plus" data-iconpos="notext" class="ui-btn-right" onclick="return newTool();"></a>
 			</div>
 
 			<div role="main" class="ui-content" data-role="content">
 				<ul id="toolsList" data-role="listview" data-filter="true" data-filter-placeholder="Search tools..." data-inset="true">
-<!-- Comment out when we use JQuery to populate -->
-					<li>
-						<a href="#tool-page" onclick="setTool(this);">
-							<h2>Bolts</h2>
-							<p>Received</p>
-							<p class="ui-li-aside"><strong>32</strong></p>
-						</a>
-					</li>
-					<li>
-						<a href="#tool-page" onclick="setTool(this);">
-							<h2>Philips 5.0 x 75mm Screwdriver</h2>
-							<p>Shipped</p>
-							<p class="ui-li-aside"><strong>1</strong></p>
-						</a>
-					</li>
-<!-- End of placeholder data -->
 				</ul>
 			</div>
 
 			<div data-role="footer" data-position="fixed">
-				<p>&copy; Group 4 </p>
+				<h1>&copy; Group 4 </h1>
 			</div>
 		</section>
 
@@ -86,7 +66,7 @@
 			</div>
 
 			<div data-role="footer" data-position="fixed">
-				<p>&copy; Group 4 </p>
+				<h1>&copy; Group 4 </h1>
 			</div>
 		</section>
 	</body>

@@ -14,7 +14,7 @@ var availableTools = [
 	{"name":"Solder Core"},
 	{"name":"Desoldering Pump"},
 	{"name":"Anti-Static Wrist Strap"},
-	{"name":"8-piece Mini-electronic Combination Wrench Set"},
+	{"name":"8-piece Mini-electric Combo Wrench Set"},
 	{"name":"6-piece Precision Screwdriver Set"},
 	{"name":"8in Wire Strip Pliers"},
 	{"name":"5in Side Cutter Pliers"},
@@ -86,7 +86,7 @@ var jobs = [
 	{"location":"Detroit",
 	"date":"11/29/2015",
 	"tools":[
-		{"name":"8-piece Mini-electronic Combination Wrench Set",
+		{"name":"8-piece Mini-electric Combo Wrench Set",
 		"status":"Requested",
 		"quantity":1},
 		{"name":"6-piece Precision Screwdriver Set",

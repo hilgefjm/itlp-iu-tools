@@ -6,6 +6,10 @@ $(document).ready(function(){
   $('#jobList').listview("refresh");
 });
 
+var createToolListview = function(){};
+
 function setJob(index){
-  alert(jobs[index].location);
+  console.log(jobs[index].location + " selected.");
+  currentJob = index;
+  createToolListview()
 }

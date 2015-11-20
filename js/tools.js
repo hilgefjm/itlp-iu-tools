@@ -1,3 +1,6 @@
+var currentJob = null;
+var currentTool = null;
+
 var availableTools = [
 	{"name":"Soldering Iron"},
 	{"name":"Philips 3.2 x 75mm Screwdriver"},

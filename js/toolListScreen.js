@@ -1,7 +1,7 @@
 function setTool(index){
   console.log(jobs[currentJob].tools[index].name + " selected.");
   currentTool = index;
-  formatToolScreen();
+  formatToolScreen(index);
 }
 
 function newTool(){

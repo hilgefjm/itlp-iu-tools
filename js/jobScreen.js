@@ -9,7 +9,7 @@ $(document).ready(function(){
 var createToolListview = function(){};
 
 function setJob(index){
-  console.log(jobs[index].location + " selected.");
+  console.log(jobs[index].location + " location is selected.");
   currentJob = index;
   createToolListview();
 }

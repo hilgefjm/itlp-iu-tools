@@ -1,3 +1,5 @@
+var nextStatus;
+
 formatToolScreen = function(index){
   console.log("Formatting tool screen.");
   //All logic to format tool screen starts here
@@ -6,23 +8,32 @@ formatToolScreen = function(index){
   /*
   	Statuses: Requested -> Shipped -> Received -> Used (Bolts, Washers, Screws ONLY) or Returned
   */
-  var nextStatus;
   switch (jobs[currentJob].tools[index].status) {
+      case "Requested":
+        document.getElementById("next-status-button").style.display = "none";
+        break;
       case "Shipped":
-          nextStatus = "Tool(s) Received";
+          nextStatusString = "Part(s) Received";
+          nextStatus = "Received";
           break;
       case "Received":
         if((jobs[currentJob].tools[index].name = "Bolts") ||
         (jobs[currentJob].tools[index].name = "Washers") ||
         (jobs[currentJob].tools[index].name = "Screws")){
-          nextStatus = "Part(s) Used";
+          nextStatusString = "Part(s) Used";
+          nextStatus = "Used";
         }
         else{
-          nextStatus = "Return Part";
+          nextStatusString = "Return Part";
+          nextStatus = "Returned";
         }
           break;
         case "Used":
-            nextStatus = "Close out Tool";
+            nextStatusString = "Close out Tool";
+            break;
+        case "Returned":
+            nextStatusString = "Request";
+            nextStatus = "Requested";
             break;
   }
 
@@ -34,6 +45,7 @@ formatToolScreen = function(index){
 
 }
 
-  function updateStatus(){
-    alert('test');
-  }
+updateStatus = function(){
+  jobs[currentJob].tools[currentTool].status = nextStatus;
+  alert("new status is " + jobs[currentJob].tools[currentTool].status + ".");
+}

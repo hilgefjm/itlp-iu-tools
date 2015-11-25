@@ -6,7 +6,6 @@ $(document).ready(function(){
   $('#select-tool').selectmenu("refresh");
 });
 
-
 /* Source: JQuery Mobile Select Menu Custom Filter Demo */
 ( function( $ ) {
 function pageIsSelectmenuDialog( page ) {
@@ -89,4 +88,12 @@ $.mobile.document
 formatToolScreen = function(){
   console.log("Formatting tool screen.");
   //All logic to format tool screen starts here
+}
+
+function requestTool() {
+  console.log("Adding tool!");
+  var toolName = document.getElementById('select-tool').value;
+  var quantity = document.getElementById('tool-quantity').value;
+
+  console.log("Adding tool: " + toolName + " - " + quantity);
 }

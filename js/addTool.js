@@ -1,9 +1,27 @@
 $(document).ready(function(){
 
+  $('#new-tool').on('submit', function(e) {
+    e.preventDefault();
+    var toolName = document.getElementById('select-tool').value;
+    var quantity = document.getElementById('tool-quantity').value;
+
+    if (quantity.trim() === ''){
+      alert("Please enter a quantity!");
+      return false;
+    }
+
+    jobs[currentJob].tools.push({"name": toolName, "status": "Requested", "quantity": quantity});
+
+    console.log("Adding tool: " + toolName + " - " + quantity);
+
+    $.mobile.pageContainer.pagecontainer("change", "#tools-page", {transition: "slide", changeHash: true, reload: true});
+  });
+
   for(i = 0; i < availableTools.length; i++){
     $('#select-tool').append("<option value=\"" + availableTools[i].name + "\">" + availableTools[i].name + "</option>");
   }
   $('#select-tool').selectmenu("refresh");
+
 });
 
 /* Source: JQuery Mobile Select Menu Custom Filter Demo */
@@ -88,12 +106,4 @@ $.mobile.document
 formatToolScreen = function(){
   console.log("Formatting tool screen.");
   //All logic to format tool screen starts here
-}
-
-function requestTool() {
-  console.log("Adding tool!");
-  var toolName = document.getElementById('select-tool').value;
-  var quantity = document.getElementById('tool-quantity').value;
-
-  console.log("Adding tool: " + toolName + " - " + quantity);
 }

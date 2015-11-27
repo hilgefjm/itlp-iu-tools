@@ -83,7 +83,8 @@
 			</div>
 
 			<div role="main" class="ui-content" data-role="content">
-    			<div data-role="fieldcontain">
+				<form id="new-tool" action="" method="" data-ajax=”false”>
+					<div data-role="fieldcontain">
 		        <label for="select-tool">Select Tool:</label>
 		        <select name="select-tool" id="select-tool" data-native-menu="false" class="filterable-select">
 						</select>
@@ -92,7 +93,8 @@
 						<label for="tool-quantity">Quantity:</label>
 						<input type="number" name="tool-quantity" id="tool-quantity">
 					</div>
-					<input type="button" name="Request" id="request" value="Request Tool" onclick="requestTool()"/>
+					<input type="submit" name="Request" id="request" value="Request Tool"/>
+				</form>
 			</div>
 
 			<div data-role="footer" data-position="fixed">

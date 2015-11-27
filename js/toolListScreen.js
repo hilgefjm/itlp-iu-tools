@@ -1,11 +1,11 @@
 function setTool(index){
   console.log(jobs[currentJob].tools[index].name + " selected.");
   currentTool = index;
-  formatToolScreen(index);
+  formatToolScreen();
 }
 
 function newTool(){
-  if(currentJob){
+  if(currentJob >= 0){
     currentTool = null;
     formatToolScreen();
     return true;

@@ -86,11 +86,6 @@ $.mobile.document
     });
 })( jQuery );
 
-formatToolScreen = function(){
-  //console.log("Formatting add tool screen.");
-  //All logic to format tool screen starts here
-}
-
 function addTool() {
     var toolName = document.getElementById('select-tool').value;
     var quantity = document.getElementById('tool-quantity').value.trim();

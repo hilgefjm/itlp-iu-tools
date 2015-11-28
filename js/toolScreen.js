@@ -43,12 +43,12 @@ formatToolScreen = function(){
   $('#tool-Name').text("Name: " + jobs[currentJob].tools[currentTool].name);
   $('#tool-Status').text("Status: " + jobs[currentJob].tools[currentTool].status);
   $('#tool-Quantity').text("Quantity: " + jobs[currentJob].tools[currentTool].quantity);
-  $('#next-status-button').text(nextStatus);
+  $('#next-status-button').text(nextStatusString);
 
 }
 
 updateStatus = function(){
   jobs[currentJob].tools[currentTool].status = nextStatus;
-  alert("new status is " + jobs[currentJob].tools[currentTool].status + ".");
+  console.log("New status of " + jobs[currentJob].tools[currentTool].name + " is " + jobs[currentJob].tools[currentTool].status + ".");
   createToolListview();
 }
